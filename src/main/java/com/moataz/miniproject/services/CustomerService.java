@@ -12,6 +12,7 @@ public interface CustomerService {
     Customer Modify(Customer customer);
     void DeleteById(Long customerId);
     List<Customer> findCustomersByCustomerNameContains(String customerName);
+    Customer findCustomerById(Long id);
 
 
 }

@@ -33,7 +33,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public CustomerOrder findById(Long orderId) {
-        return OrderRepo.getById(orderId);
+        return OrderRepo.findById(orderId).get();
     }
 
     @Override

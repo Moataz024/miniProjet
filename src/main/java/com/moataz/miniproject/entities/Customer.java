@@ -24,9 +24,8 @@ public class Customer {
     private String customerAddress;
     @JsonFormat(pattern="yyyy-MM-dd")
     private Date dateOfBirth;
+    @OneToMany(mappedBy = "cust",fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JsonIgnore
-    @OneToMany(mappedBy = "cust",fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<CustomerOrder> customerOrders;
-
 
 }
